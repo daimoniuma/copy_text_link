@@ -3,7 +3,7 @@
 		"copytextlink_dev@zatsunenomokou.eu": {
 			"updates": [
 				{ "version": "1.0.0",
-					"update_link": "https://gitlab.com/ZatsuneNoMokou/copy_text_link/raw/master/dist/copy_text_link_dev.xpi.xpi",
+					"update_link": "https://gitlab.com/ZatsuneNoMokou/copy_text_link/raw/master/dist/copy_text_link_dev.xpi",
 					"applications": {
 						"gecko": { "strict_min_version": "50" } } }
 			]
