@@ -1,0 +1,4 @@
+copy_text_link_dev_-*.zip
+copy_text_link-*.zip
+.goutputstream*
+tmp/

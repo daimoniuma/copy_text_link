@@ -1,0 +1,26 @@
+{
+	"extName": {
+		"message": "Copy Text Link",
+		"description": ""
+	},
+	"extShortDesc": {
+		"message": "Copiez le texte des liens sans avoir à faire de sélection.",
+		"description": "this will be used as short description in web stores: MUST BE 132 characters OR LESS"
+	},
+	"copy_result": {
+		"message": "Résultat de la copie"
+	},
+	"Copy_link_text": {
+		"message": "Copier le texte du lien"
+	},
+	"Copied_link_text": {
+		"message": "Texte du lien copié"
+	},
+	"Error_when_copying_to_clipboad": {
+		"message": "Erreur lors de la copie dans le presse-papier"
+	},
+	"close": {
+		"message": "Fermer"
+	}
+
+}

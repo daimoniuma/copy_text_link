@@ -1,0 +1,25 @@
+{
+	"extName": {
+		"message": "Copy Text Link",
+		"description": ""
+	},
+	"extShortDesc": {
+		"message": "Copy the text of links without having to select it.",
+		"description": "this will be used as short description in web stores: MUST BE 132 characters OR LESS"
+	},
+	"copy_result": {
+		"message": "Copy result"
+	},
+	"Copy_link_text": {
+		"message": "Copy text of link"
+	},
+	"Copied_link_text": {
+		"message": "Text of link copied"
+	},
+	"Error_when_copying_to_clipboad": {
+		"message": "Error when copying into clipboad"
+	},
+	"close": {
+		"message": "Close"
+	}
+}
