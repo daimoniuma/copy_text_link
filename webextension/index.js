@@ -17,11 +17,11 @@ function doNotif(title, message){
 		contextMessage: chrome.runtime.getManifest().name,
 		iconUrl: "/icon.png",
 		isClickable: true
-	}
+	};
 	
 	let close = {title: _("Close"), iconUrl: "/data/ic_close_black_24px.svg"};
 	
-	if(chromeAPI_button_availability == true){
+	if(chromeAPI_button_availability === true){
 		options.buttons = [close];
 	}
 	
@@ -29,20 +29,20 @@ function doNotif(title, message){
 	
 	new Promise((resolve, reject) => {
 		chrome.notifications.create(notification_id, options, function(notificationId){
-			if(typeof chrome.runtime.lastError == "object" && chrome.runtime.lastError != null && typeof chrome.runtime.lastError.message == "string" && chrome.runtime.lastError.message.length > 0){
+			if(typeof chrome.runtime.lastError === "object" && chrome.runtime.lastError !== null && typeof chrome.runtime.lastError.message === "string" && chrome.runtime.lastError.message.length > 0){
 				reject(chrome.runtime.lastError);
 			}
 		});
 	}).catch((error)=> {
-		if(typeof error == "object" && typeof error.message == "string" && error.message.length > 0){
-			console.group()
+		if(typeof error === "object" && typeof error.message === "string" && error.message.length > 0){
+			console.group();
 			console.warn(error.message);
 			console.dir(error);
 			console.groupEnd();
 
-			if(error.message == "Adding buttons to notifications is not supported." || error.message.indexOf("\"buttons\"") != -1){
+			if(error.message === "Adding buttons to notifications is not supported." || error.message.indexOf("\"buttons\"") !== -1){
 				chromeAPI_button_availability = false;
-				console.log("Buttons not supported, retrying notification without them.")
+				console.log("Buttons not supported, retrying notification without them.");
 				doNotif(title, message);
 			}
 		}
@@ -57,7 +57,7 @@ chrome.notifications.onClicked.addListener(onNotificationClick);
 
 function isRightURL(URL){
 	let test_url = /(?:http|https):\/\/.+/;
-	return (typeof URL == "string" && test_url.test(URL));
+	return (typeof URL === "string" && test_url.test(URL));
 }
 
 chrome.contextMenus.removeAll();
@@ -72,7 +72,9 @@ chrome.contextMenus.create({
 		}, function(responseData){
 			const copyLinkText_success = responseData.copyLinkText_success,
 				string = responseData.string;
-			doNotif(_("copy_result"), (copyLinkText_success)? _("Copied_link_text") : _("Error_when_copying_to_clipboad"));
+			if(!copyLinkText_success || chrome.runtime.getManifest().name.indexOf("Dev")!==-1){
+				doNotif(_("copy_result"), (copyLinkText_success)? _("Copied_link_text") : _("Error_when_copying_to_clipboad"));
+			}
 			console.warn(`Copy to clipboad ${(copyLinkText_success)? "success" : "error"} (${string})`);
 		});
 	}
