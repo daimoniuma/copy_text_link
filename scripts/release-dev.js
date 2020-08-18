@@ -4,7 +4,7 @@ const
 	path = require("path"),
 	pwd = path.join(__dirname, ".."),
 
-	webExt = require('web-ext'),
+	webExt = require('web-ext').default,
 
 	{fsReadFile, getFilesRecursively, modifyFile, modifyFiles} = require("./common/file-operations"),
 	echo = console.log,
@@ -12,6 +12,8 @@ const
 
 	through2 = require('through2'),
 	stripDebug = require('strip-debug'), //TODO /!\ Using my rocambole fork hoping update https://github.com/millermedeiros/rocambole/issues/32
+
+	klawSync = require('klaw-sync'),
 
 	yargs = require('yargs')
 		.usage('Usage: $0 [options]')
