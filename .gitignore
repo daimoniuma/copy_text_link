@@ -2,3 +2,19 @@ copy_text_link_dev_-*.zip
 copy_text_link-*.zip
 .goutputstream*
 tmp/
+
+
+
+### Node template
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm

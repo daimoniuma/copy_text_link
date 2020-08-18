@@ -1,0 +1,38 @@
+{
+	"name": "copy_text_link",
+	"version": "2.0.0",
+	"description": "Copy the text of links without having to select it.",
+	"dependencies": {},
+	"devDependencies": {
+		"@types/fs-extra": "^9.0.1",
+		"@types/klaw-sync": "^6.0.0",
+		"chalk": "^2.3.1",
+		"fs-extra": "^5.0.0",
+		"klaw": "^2.1.1",
+		"klaw-sync": "^6.0.0",
+		"rocambole": "github:millermedeiros/rocambole",
+		"strip-debug": "^2.0.0",
+		"through2": "^2.0.3",
+		"web-ext": "^4.1.0",
+		"web-ext-types": "^3.2.1",
+		"yargs": "^11.0.0"
+	},
+	"scripts": {
+		"release:dev": "node ./scripts/release-dev.js",
+		"release": "node scripts/release-dev.js --prod",
+		"test": "node scripts/test.js"
+	},
+	"webExt": {
+		"ignoreFiles": []
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@gitlab.com:ZatsuneNoMokou/copy_text_link.git"
+	},
+	"author": "ZatsuneNoMokou",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://gitlab.com/ZatsuneNoMokou/copy_text_link/issues"
+	},
+	"homepage": "https://gitlab.com/ZatsuneNoMokou/copy_text_link#README"
+}
