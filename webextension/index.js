@@ -27,7 +27,7 @@ function doNotif(title, message) {
 		type: "basic",
 		title: title,
 		message: message,
-		contextMessage: chrome.runtime.getManifest().name,
+		contextMessage: message,
 		iconUrl: "/icon.png",
 		isClickable: true
 	};
@@ -86,7 +86,7 @@ function copyToClipboard(string) {
 chrome.contextMenus.removeAll();
 chrome.contextMenus.create({
 	id: 'link_CopyTextLink',
-	title:_("Copy_link_text"),
+	title:_("copyTextLink"),
 	contexts: ["link"],
 	targetUrlPatterns: ["http://*/*", "https://*/*"]
 });
@@ -98,7 +98,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 		let clipboardResult = (typeof responseData === 'object' && responseData !== null) && copyToClipboard(responseData.string);
 
 		if (!clipboardResult || (await getEnv()) !== 'prod') {
-			doNotif(_("copy_result"), (clipboardResult) ? _("Copied_link_text") : _("Error_when_copying_to_clipboad"));
+			doNotif((clipboardResult) ? _("copied") : _("error"), (clipboardResult) ? (responseData.string) : _("errorDesc"));
 		}
 
 		console[(clipboardResult) ? "debug" : "warn"](`Copy to clipboad ${(clipboardResult) ? "success" : "error"} (${responseData?.string})`);

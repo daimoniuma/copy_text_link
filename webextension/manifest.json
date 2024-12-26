@@ -1,17 +1,16 @@
 {
-	"applications": {
+	"browser_specific_settings": {
 		"gecko": {
-			"id": "copytextlink_dev@zatsunenomokou.eu",
-			"update_url": "https://gitlab.com/ZatsuneNoMokou/copy_text_link/raw/master/dist/copytextlink_dev.update.json",
+			"id": "copytextlink@daimonium.com",
 			"strict_min_version": "74.0"
 		}
 	},
 	"manifest_version": 2,
-	"name": "Copy Text Link (Dev)",
-	"short_name": "CopyTextLinkDev",
+	"name": "Copy Text Link",
+	"short_name": "CopyTextLink",
 	"description": "__MSG_extShortDesc__",
-	"author": "ZatsuneNoMokou",
-	"version": "2.0.0",
+	"author": "ZatsuneNoMokou, Daimonium",
+	"version": "2.0.6",
 	"icons": {
 		"96": "/icon_96.png",
 		"128": "/icon.png"

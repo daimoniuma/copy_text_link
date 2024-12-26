@@ -1,0 +1,22 @@
+{
+	"extName": {
+		"message": "Copy Text Link",
+		"description": ""
+	},
+	"extShortDesc": {
+		"message": "Копируйте текст ссылки через контекстное меню.",
+		"description": ""
+	},
+	"copied": {
+		"message": "Скопировано"
+	},
+	"copyTextLink": {
+		"message": "Копировать текст ссылки"
+	},
+	"error": {
+		"message": "Ошибка"
+	},
+	"errorDesc": {
+		"message": "Не удалось скопировать текст ссылки"
+	}
+}

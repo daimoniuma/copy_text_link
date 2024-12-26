@@ -4,22 +4,19 @@
 		"description": ""
 	},
 	"extShortDesc": {
-		"message": "Copy the text of links without having to select it.",
-		"description": "this will be used as short description in web stores: MUST BE 132 characters OR LESS"
+		"message": "Copy text of link through context menu.",
+		"description": ""
 	},
-	"copy_result": {
-		"message": "Copy result"
+	"copied": {
+		"message": "Copied"
 	},
-	"Copy_link_text": {
+	"copyTextLink": {
 		"message": "Copy text of link"
 	},
-	"Copied_link_text": {
-		"message": "Text of link copied"
+	"error": {
+		"message": "Error"
 	},
-	"Error_when_copying_to_clipboad": {
-		"message": "Error when copying into clipboad"
-	},
-	"close": {
-		"message": "Close"
+	"errorDesc": {
+		"message": "Failed to copy text of link"
 	}
 }
